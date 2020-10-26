@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/recycler_view_header">
+
+        <EditTextPreference
+            app:key="days_number"
+            app:title="@string/days_number_title"
+            app:useSimpleSummaryProvider="true"
+            android:defaultValue="3"/>
+
+        <EditTextPreference
+            app:key="currency"
+            app:title="@string/currency_title"
+            app:useSimpleSummaryProvider="true"
+            android:defaultValue="USD"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/host_fragment">
+
+    <fragment
+        android:id="@+id/host_fragment"
+        android:name="com.example.structdestruct.currencies.HostFragment"
+        android:label="Currencies"
+        tools:layout="@layout/fragment_host" >
+        <action
+            android:id="@+id/action_host_fragment_to_dialog_fragment"
+            app:destination="@id/fragment_elem_dialog" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/fragment_elem_dialog"
+        android:name="com.example.structdestruct.currencies.ElemDialogFragment" >
+        <action
+            android:id="@+id/action_elem_dialog_to_host_fragment"
+            app:destination="@id/host_fragment" />
+    </dialog>
+</navigation>
